@@ -26,7 +26,7 @@ depends_on = [azurerm_network_interface.nic]
   size                            = each.value.vmsize
   admin_username                  = each.value.adminusername
   admin_password                  = each.value.adminpassword
-  disable_password_authentication = false
+  disable_password_authentication = true
 
   network_interface_ids = [data.azurerm_network_interface.datanic[each.key].id]
 
