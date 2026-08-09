@@ -34,14 +34,14 @@ snets = {
 }
 
 publicipdetails = {
-  frontpip = {
-    publicipname = "frontendpublicip"
+  bastionpip = {
+    publicipname = "bastionpublicip"
     rgname       = "dev-rg"
     location     = "eastus"
   }
 
-  backpip = {
-    publicipname = "backendpublicip"
+  appgwpip = {
+    publicipname = "appgwpublicip"
     rgname       = "dev-rg"
     location     = "eastus"
   }
@@ -51,16 +51,16 @@ publicipdetails = {
 
 vm = {
   vm1 = {
-    nicname       = "frontendnic"
-    location      = "eastus"
-    rgname        = "devrg"
-    subnetname    = "frontendsubnet"
-    publicipname  = "frontendpublicip"
+    nicname    = "frontendnic"
+    location   = "eastus"
+    rgname     = "devrg"
+    subnetname = "frontendsubnet"
+    # publicipname  = "frontendpublicip"
     vmname        = "frontendvm"
     vmsize        = "Standard_B1s"
     adminusername = "adminuser"
-    adminpassword = "Admin@1234"
-    vnetname      = "vnetpractice1"
+    # adminpassword = "Admin@1234"
+    vnetname = "vnetpractice1"
   }
 
   vm2 = {
@@ -71,9 +71,9 @@ vm = {
     vmname        = "backendvm"
     vmsize        = "Standard_B1s"
     adminusername = "adminuser"
-    adminpassword = "Admin@1234"
-    vnetname      = "vnetpractice1"
-    publicipname  = "backendpublicip"
+    # adminpassword = "Admin@1234"
+    vnetname = "vnetpractice1"
+    # publicipname  = "backendpublicip"
   }
 
 

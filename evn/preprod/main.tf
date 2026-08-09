@@ -39,4 +39,5 @@ module "nic" {
   vm              = var.vm
   snets           = var.snets
   publicipdetails = var.publicipdetails
+  # ssh_public_key = var.ssh_public_key
 }
