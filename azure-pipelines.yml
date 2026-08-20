@@ -3,6 +3,8 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+# more precisely, single implicit stage + single job + 3 steps
+
 trigger:
 - main
 
@@ -20,3 +22,23 @@ steps:
     terraform init
 
   displayName: "terraform init kr be"
+
+
+- script : |
+    az --version
+
+  displayName: "check azure cli"
+
+
+- script: |
+    git --version
+  displayName: "Check Git Version"
+
+# - task: AzureCLI@2
+#   displayName: "Test Azure Service Connection"
+#   inputs:
+#     azureSubscription: "YOUR-SERVICE-CONNECTION-NAME"
+#     scriptType: "ps"
+#     scriptLocation: "inlineScript"
+#     inlineScript: |
+#       az account show  
